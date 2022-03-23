@@ -25,7 +25,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void Posts_저장_불러오기() {
+    public void Posts_Insert_Select() {
 
         String title = "테스트 게시글";
         String content = "테스트 본문";
@@ -47,7 +47,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void BaseTimeEntity_등록() {
+    public void BaseTimeEntity_Insert() {
 
         LocalDateTime now = LocalDateTime.of(2019, 6, 4, 0, 0, 0);
 
