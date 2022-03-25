@@ -25,7 +25,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void Posts_Insert_Select() {
+    public void Posts_저장_불러오기() {
 
         String title = "테스트 게시글";
         String content = "테스트 본문";
@@ -33,10 +33,10 @@ public class PostsRepositoryTest {
         // 테이블 posts에 insert/update 쿼리 실행
         // id 값이 있다면 update, 없다면 insert 쿼리 실행
         postsRepository.save(Posts.builder()
-                            .title(title)
-                            .content(content)
-                            .author("rf1393@refine.co.kr")
-                            .build());
+                .title(title)
+                .content(content)
+                .author("rf1393@refine.co.kr")
+                .build());
 
         // 테이블 posts에 있는 모든 데이터를 조회
         List<Posts> postsList = postsRepository.findAll();
@@ -47,15 +47,15 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void BaseTimeEntity_Insert() {
+    public void BaseTimeEntity_등록() {
 
         LocalDateTime now = LocalDateTime.of(2019, 6, 4, 0, 0, 0);
 
         postsRepository.save(Posts.builder()
-                            .title("title")
-                            .content("content")
-                            .author("author")
-                            .build());
+                .title("title")
+                .content("content")
+                .author("author")
+                .build());
 
         List<Posts> postsList = postsRepository.findAll();
 
