@@ -21,7 +21,6 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
-        model.addAttribute("posts", postsService.findAllDesc());
 
         /*
              (SessionUser) httpSession.getAttribute("user")
